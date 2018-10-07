@@ -1,7 +1,5 @@
 # Projet_POO
 
-Beer is love, beer is life.
-
 Les Classes  et Enumerations se trouvent dans Projet_POO/Simulation_equipe_de_robots_pompiers/src/ . 
 Ils sont rangés en "packages" par "affinités" 
 
