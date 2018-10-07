@@ -49,7 +49,7 @@ public class LecteurDonnees {
     }
 
 
-
+    public static DonneesSimulation creeDonnees(String fichierDonnees);
 
     // Tout le reste de la classe est prive!
 

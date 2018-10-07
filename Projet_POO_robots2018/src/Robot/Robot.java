@@ -1,27 +1,48 @@
 package Robot;
 
 import Surroundings.*;
+import Enums.*;
 
-public class Robot {
-	private Case caseActuelle;
+public abstract class Robot {
+	private Case position;
+	private int volumeTotal;
+	private double vitesse;
 	
-	public Case getPosition() {
-		return this.caseActuelle;
+	public Case getPosition() 
+	{
+		return this.position;
 	}
 	
-	public void setPosition(Case x) {
-		this.caseActuelle = x; 
+	public void setPosition(Case x) 
+	{
+		this.position = x; 
 	}
 	
-	public double getVitesse(NatureTerrain nature) {
-		return (double)0;
+	public void setVitesse(double vit)
+	{
+		this.vitesse = vit;
 	}
 	
-	public void remplirReservoir() {
-		
+	public double getVitesse()
+	{
+		return this.vitesse;
 	}
 	
-	public void deverserEau(int volume) {
-		
+	
+	
+	public void setVolume(int vol)
+	{
+		this.volumeTotal=vol;
 	}
+	
+	public int getVolume()
+	{
+		return this.volumeTotal;
+	}
+	
+	public abstract double getVitesse(NatureTerrain nature);
+	
+	public abstract void remplirReservoir();
+	
+	public abstract void deverserEau(int volume);
 }

@@ -6,6 +6,7 @@ public class Carte {
 	private int tailleCases;
 	private Case[][] caseCarte;
 	private int nbLignes, nbColonnes;
+
 	
 	public void Carte(int nbLignes, int nbColonnes) {
 		caseCarte = new Case[nbLignes][nbColonnes];

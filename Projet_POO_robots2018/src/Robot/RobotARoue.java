@@ -1,24 +1,43 @@
 package Robot;
 
+import Enums.*;
+import Surroundings.Case;
+
 public class RobotARoue extends Robot
 {
-	private int volumeTotal = 5000; //Le réservoir fait 5000L 
-	int reservoir;
+
+	public RobotARoue(Case caseDepart)
+	{
+		this.setPosition(caseDepart);
+		this.setVolume(5000);
+	}
 	
-	@Override
-	double getVitesse(NatureTerrain nature) 
+	public double getVitesse(NatureTerrain nature) 
+	{
+		double vit=this.getVitesse();
+		switch(nature)
+		{
+		case FORET:
+			vit=0; 
+			break;
+		case EAU : 
+			vit=0;
+			break;
+		case ROCHE :
+			vit=0;
+		default : 
+			break;	
+		}
+		return vit;
+	}
+	
+	public void remplirReservoir() // 30 min pour le remplir entierement -- 333.33 L / min
 	{
 		
 	}
 	
-	@Override
-	void remplirReservoir() // 30 min pour le remplir entierement -- 333.33 L / min
-	{
-		
-	}
 	
-	@Override
-	void deverserEau(int volume) 
+	public void deverserEau(int volume) 
 	{
 		
 	}

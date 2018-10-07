@@ -1,24 +1,28 @@
 package Robot;
+import Enums.*;
+import Surroundings.Case;
 
 public class Drone extends Robot 
 {
-	private int volumeTotal = 10000; //Le réservoir fait 10000L 
-	int reservoir;
+	public Drone(Case caseDepart)
+	{
+		this.setPosition(caseDepart);
+		this.setVolume(10000);
+	}
 	
-	@Override
-	double getVitesse(NatureTerrain nature) 
+	public double getVitesse(NatureTerrain nature) 
+	{
+		return this.getVitesse();
+	}
+	
+	
+	public void remplirReservoir() // 30 min pour le remplir entierement -- 333.33 L / min
 	{
 		
 	}
 	
-	@Override
-	void remplirReservoir() // 30 min pour le remplir entierement -- 333.33 L / min
-	{
-		
-	}
 	
-	@Override
-	void deverserEau(int volume) 
+	public void deverserEau(int volume) 
 	{
 		
 	}

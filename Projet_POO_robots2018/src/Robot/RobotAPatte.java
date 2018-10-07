@@ -1,23 +1,40 @@
 package Robot;
 
+import Enums.*;
+import Surroundings.Case;
+
 public class RobotAPatte extends Robot 
 {
-	private int volumeTotal; //Le réservoir est infini 
-	int reservoir;
 	
-	@Override
-	double getVitesse(NatureTerrain nature) 
+	public RobotAPatte(Case caseDepart)
 	{
-		
+		this.setPosition(caseDepart);
+		this.setVolume(Integer.MAX_VALUE); //infini 
 	}
 	
-	@Override
-	void remplirReservoir() // ne se rempli jamais
+	public double getVitesse(NatureTerrain nature) 
+	{
+		double vit=this.getVitesse();
+		switch(nature)
+		{
+		case EAU : 
+			vit=0;
+			break;
+		case ROCHE :
+			vit=10;
+		default : 
+			break;	
+		}
+		return vit;
+	}
+	
+	
+	public void remplirReservoir() // ne se rempli jamais
 	{		
 	}
 	
-	@Override
-	void deverserEau(int volume) 
+	
+	public void deverserEau(int volume) 
 	{
 		
 	}
