@@ -1,6 +1,6 @@
 # Projet_POO
 
-Les Classes  et Enumerations se trouvent dans Projet_POO/Simulation_equipe_de_robots_pompiers/src/ . 
+Les Classes  et Enumerations (fichiers à modifier) se trouvent dans Projet_POO_robots2018/src/ . 
 Ils sont rangés en "packages" par "affinités" 
 
 Pour faire un package il faut préciser " package [Nom_du_package];" au tout début du fichier .java,
